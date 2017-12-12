@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TDT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+<div id="wrapperNew">
+    <header_panel :user="alldata"></header_panel>
+    <sidebar_panel :members="membersdata" :user="alldata"></sidebar_panel>
+    <!--<content_panel :members="memberdetail"></content_panel>-->
+    <footer_panel></footer_panel>
+    <!-- Page content -->
+</div>
+<span id="tdtdata" style="display: none">
+	{
+	"heading": "Rio Grand Valley Travel Study",
+	"logourl":"",
+	"type":"dashboard",
+	"userdetails": {
+		"name": "Michael",
+		"address": "Washington, DC 20502, USA",
+		"travel_date": "Mon, July 2017",
+		"sample": "9125487",
+		"profile_pic": "http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/user1.png"
+	},
+	"members":[
+		{
+			"id": "01",
+			"name": "kausar",
+			"age": "34",
+			"gender": "Male",
+			"active_members": "2",			
+			"status": "Not Started",
+			"trips":[
+				{
+					"title": "Atlanta, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "04/07/2017 - Time-15:20 PM",
+					"trip_end_date": "04/07/2017 - Time-15:20 PM",
+					"trip_start_point": "Atlanta, GA 30318",
+					"trip_end_point": "Washington, DC 20502",
+					"travelby":"car",
+					"trippurpose": "For travel purpose only ",
+					"traveltime": "14:30",
+					"status":"In-progress"
+				},
+				{
+					"title": "Atlanta, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "04/07/2017 - Time-15:20 PM",
+					"trip_end_date": "04/07/2017 - Time-15:20 PM",
+					"trip_start_point": "Atlanta, GA 30318",
+					"trip_end_point": "Washington, DC 20502",
+					"travelby":"car",
+					"trippurpose": "For travel purpose only ",
+					"traveltime": "14:30",
+					"status":"Completed"
+				},
+				{
+					"title": "Atlanta, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "04/07/2017 - Time-15:20 PM",
+					"trip_end_date": "04/07/2017 - Time-15:20 PM",
+					"trip_start_point": "Atlanta, GA 30318",
+					"trip_end_point": "Washington, DC 20502",
+					"travelby":"car",
+					"trippurpose": "For travel purpose only ",
+					"traveltime": "14:30",
+					"status":"Not Started"
+				}
+			]
+			
+		},
+		{
+			"id": "02",
+			"name": "Amit",
+			"age": "32",
+			"gender": "Female",
+			"active_members": "3",			
+			"status": "Completed!",
+			"trips":[
+				{
+					"title": "Janakpuri, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "05/08/2018 - Time-12:20 PM",
+					"trip_end_date": "05/08/2018 - Time-12:20 PM",
+					"trip_start_point": "Janakpuri, GA 30318",
+					"trip_end_point": "New Delhi, DC 20502",
+					"travelby":"car/bus",
+					"trippurpose": "For travel purpose ",
+					"traveltime": "12:30",
+					"status":"Completed"
+				},
+				{
+					"title": "Delhi, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "08/08/2018 - Time-18:20 PM",
+					"trip_end_date": "08/08/2018 - Time-18:20 PM",
+					"trip_start_point": "Delhi, GA 30318",
+					"trip_end_point": "Delhi, DC 20502",
+					"travelby":"Bus",
+					"trippurpose": "Travel purpose only ",
+					"traveltime": "05:30",
+					"status":"In-progress"
+				},
+				{
+					"title": "Mumbai, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "09/09/2019 - Time-15:20 PM",
+					"trip_end_date": "09/09/2019 - Time-22:20 PM",
+					"trip_start_point": "Mumbai, GA 30318",
+					"trip_end_point": "Mumbai, DC 20502",
+					"travelby":"car",
+					"trippurpose": "For Office Trip ",
+					"traveltime": "10:30",
+					"status":"Not Started"
+				}
+			]
+			
+		},
+		{
+			"id": "03",
+			"name": "Sks",
+			"age": "32",
+			"gender": "male",
+			"active_members": "3",			
+			"status": "In progress...",
+			"trips":[
+				{
+					"title": "Janakpuri, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "05/08/2018 - Time-12:20 PM",
+					"trip_end_date": "05/08/2018 - Time-12:20 PM",
+					"trip_start_point": "Janakpuri, GA 30318",
+					"trip_end_point": "New Delhi, DC 20502",
+					"travelby":"car/bus",
+					"trippurpose": "For travel purpose ",
+					"traveltime": "12:30",
+					"status":"Completed"
+				},
+				{
+					"title": "Delhi, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "08/08/2018 - Time-18:20 PM",
+					"trip_end_date": "08/08/2018 - Time-18:20 PM",
+					"trip_start_point": "Delhi, GA 30318",
+					"trip_end_point": "Delhi, DC 20502",
+					"travelby":"Bus",
+					"trippurpose": "Travel purpose only ",
+					"traveltime": "05:30",
+					"status":"In-progress"
+				},
+				{
+					"title": "Mumbai, GA 30318 (Washington, DC 20502)",
+					"trip_start_date": "09/09/2019 - Time-15:20 PM",
+					"trip_end_date": "09/09/2019 - Time-22:20 PM",
+					"trip_start_point": "Mumbai, GA 30318",
+					"trip_end_point": "Mumbai, DC 20502",
+					"travelby":"car",
+					"trippurpose": "For Office Trip ",
+					"traveltime": "10:30",
+					"status":"Not Started"
+				}
+			]
+			
+		}
+		
+		
+	]
+}
+</span>
+
+<script src="js/global.min.js"></script>
+</body>
+</html>

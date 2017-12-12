@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue_JSon_join</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+<link href="css/custom_style.css" rel="stylesheet">
+</head>
+
+<body>
+<!--main wrapper begining-->
+	<div class="container-wrapper" id="container-wrapper">
+		<splash-panel :splash-panel-data="alldata"></splash-panel>
+		<header-panel :header-data="alldata"></header-panel>			
+		<inner-content-panel :inner-content="alldata"></inner-content-panel>	
+	</div>
+	<!--main wrapper End-->
+	
+<span id="welcome-data" style="display: none">
+	{
+	"splashLogo1":"images/mck_logo.jpg",
+	"splashLogo2":"images/tool_logo.jpg",
+	"leftTopIntroImg1":"images/mck_logo_inner.jpg",
+	"leftTopIntroImg2":"images/logo_agility.jpg",
+	"CentreIntroImg":"images/home_icon.jpg",
+	"welcometxt":"WELCOME TO THE AGILITY WORD TEST",
+	"termsConditionsData":{
+		"preLinkTxt":"I have read and & agree to ",
+		"linkTxt":"term and conditions",
+		"postLinkTxt":"",
+		"Target":""	
+	},
+	"startBtnData":{
+		"startBtnTxt":"LETS'S START",
+		"Target":""	
+	}
+}
+</span>
+
+</body>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/vue_script.js"></script>
+</html>

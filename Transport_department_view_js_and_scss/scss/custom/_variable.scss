@@ -1,0 +1,19 @@
+$header-bg:#0f385a;
+$theme-color:#0f385a;
+$body-bg:#eceded;
+$sidebar-top-brd:#ee3e42;
+$text-color:#333333;
+$nav-text-color:#fff;
+$nav-bg:#14436a;
+$nav-active-top-bg:#0b63b4;
+$nav-active-bot-bg:#0b63b4;
+$nav-chain-border:#31527b;
+$nav-chain-color:#0668b9;
+$image-url:'../img';
+$font-family:'Libre Franklin', sans-serif;
+
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;	
+}
+html{
+	height: 100%;
+}
+
+.clearfix:before, .clearfix:after, #wrapper:before{
+	content: '';
+	display: table;
+}
+.clearfix:after, #wrapper:after{
+	clear: both;	
+}
+body{
+	font-family:'Libre Franklin', sans-serif!important;
+	background: rgba(255,255,255,1);
+    background: -webkit-linear-gradient(bottom left, rgba(255,255,255,1) 0%, rgba(213,218,230,1) 100%);
+    background: -o-linear-gradient(bottom left, rgba(255,255,255,1) 0%, rgba(213,218,230,1) 100%);
+    background: linear-gradient(to top right, rgba(255,255,255,1) 0%, rgba(213,218,230,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5dae6', GradientType=1 );
+}
+#wrapper {
+	width: 100%;
+}
+#wrapper .containerInner{
+	position: relative;
+	max-width: 420px;
+	width: 100%;
+	margin: 160px auto 30px auto;
+	background: #fff;
+	padding: 20px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-top: 5px solid #0053a0;
+}
+#wrapper .containerInner .loginBLK{
+}
+#wrapper .containerInner .loginBLK h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#wrapper .containerInner .loginBLK input {
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 42px;
+	font-size: 14px;
+	padding: 0 20px 0 50px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	outline: none;
+}
+/*#wrapper .containerInner .loginBLK input.userImg{
+	background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userImg.png)20px top no-repeat;
+	background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input.userImg:focus {
+    background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userImg.png) 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input.userPass{
+	background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userPass.png) 20px top no-repeat;
+    background-size: 16px 80px;
+}
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input.userPass:focus {
+    background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userPass.png) 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input:focus {
+    border: 1px solid #ff656c;
+}*/
+
+
+
+#wrapper .containerInner .loginBLK input#__useriD{
+	background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userImg.png)20px top no-repeat;
+	background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input#__useriD:focus {
+    background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userImg.png) 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input#__passwd{
+	background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userPass.png) 20px top no-repeat;
+    background-size: 16px 80px;
+}
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input#__passwd:focus {
+    background: #fff url(http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/img/userPass.png) 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+#wrapper .containerInner .loginBLK input:active, #wrapper .containerInner .loginBLK input:focus {
+    border: 1px solid #ff656c;
+}
+
+#wrapper .containerInner .loginBLK button {
+    width: 100%;
+    height: 40px;
+    background: #0053a0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #0162bb;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+.loginLogo{
+	display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    top: -40%;
+}
+
+.text {
+	border-bottom: solid 1px #6699cc;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    padding-bottom: 4px;
+	font-family:'Libre Franklin', sans-serif;
+    font-weight:normal;
+    font-size: 12px;
+	line-height: 18px;
+}
+
+
+#okbutton{
+	background:#0053a0!important;
+	color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+	height: 40px;
+	padding-right: 50px!important;
+	
+}
+#__useriD_label{
+	font-size: 11px;
+	font-weight: bold;
+	color: #0053a0;
+	margin-top: -22px;
+	display: block;
+}
+#__passwd_label{
+	font-size: 11px;
+	font-weight: bold;
+	color: #0053a0;
+	margin-top: -22px;
+	display: block;
+}
+
+
+
+
+

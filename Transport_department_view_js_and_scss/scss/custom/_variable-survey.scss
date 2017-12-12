@@ -1,0 +1,19 @@
+$header-bg:#fbfcfd;
+$theme-color:#d5dae6;
+$body-bg:#d5dae6;
+$sidebar-top-brd:#d5dae6;
+$text-color:#333333;
+$nav-text-color:#0654a2;
+$nav-bg:#fbfcfd;
+$nav-active-top-bg:#d5dae6;
+$nav-active-bot-bg:#d5dae6;
+$nav-chain-border:#31527b;
+$nav-chain-color:#0668b9;
+$text-sizeAnswer:14px;
+$image-url:'../img';
+$font-family:'Libre Franklin', sans-serif;
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

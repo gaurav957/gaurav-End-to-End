@@ -1,0 +1,333 @@
+body, html,.body{
+	font-family: $font-family;
+	background-color: $body-bg;
+	font-size: 14px !important;
+}
+#menu-toggle {
+    right: -63px;
+    border: solid 1px #ccc;
+    padding: 6px 10px 10px;
+	width: 42px;
+	height: 34px;
+}
+.icon-bar{
+	@include transition-property(all);
+	@include transition-duration(0.4s);
+	@include transition-timing-function(ease-in-out);
+	@media (max-width:1200px) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		@include transform(rotate(45deg));		
+		& + .icon-bar{
+			@include transform(rotate(-45deg));
+		}
+	}
+}
+a[href='http://www.confirmit.com']{
+display: none;
+}
+#wrapper.active{
+	.icon-bar{	
+		position: static;
+		margin-top: 4px;
+		@include transform(rotate(0deg));		
+		& + .icon-bar{
+			@include transform(rotate(0deg));
+		}	
+		@media (min-width:1100px) {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;	
+			@include transform(rotate(45deg));		
+			& + .icon-bar{
+				@include transform(rotate(-45deg));
+			}
+		}
+	}
+}
+.icon{
+	background-image: url(#{$image-url}/sprite.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	&.inprogress {
+		width: 20px;
+		height: 22px;
+		background-position: -9px -11px;
+		position: absolute;
+		right: 20px;
+		top: 0;
+		bottom: 0;
+		margin: auto; 
+	}
+	&.completed{
+		@extend .inprogress;
+		background-position: -39px -11px;
+	}
+	&.notstarted{
+		@extend .inprogress;
+		background-position: -67px -11px;
+	}
+	&.dashboard{
+		width: 22px;
+		height: 15px;
+		display: inline-block;
+		vertical-align: middle;
+		background-position: -101px -14px;;
+	}
+}
+.user-detail{
+	position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 16px;
+    background-color: #66758c;
+	.dropdown-menu{
+		left: inherit;
+		right: 0;
+		top: 30px;
+		padding-left: 15px;
+		padding-right: 15px;
+		min-width: 260px;
+		li{
+			font-size: 13px;
+			border-bottom: solid 1px #ccc;
+			padding-top: 5px;
+    		padding-bottom: 5px;
+			&:last-child{
+				border-bottom: none !important;
+			}
+		}
+		&:before{
+			content: '';
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #fff;
+			position: absolute;
+			right: 15px;
+			top: -9px;
+		}
+	}
+	a{
+		color: #fff;
+		padding-left: 25px;
+		font-size: 11px;
+		display: block;
+		padding-top: 1px;
+		padding-right: 5px;
+		&:hover{
+			text-decoration: none;
+		}
+		.profile-pic{
+			width: 23px;
+			height: 23px;
+			position: absolute;
+			left: -7px;
+			top: 0;
+			bottom: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+			vertical-align: top;
+		}
+	}
+}
+.breadcrumb-cst{
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #bababa;
+}
+.dashboard-label {
+    background-color: #fff;
+    padding: 5px 10px;
+}
+.white-resize{
+	background-color: #fff;
+	padding: 5px;
+	@include border-radius(5px);
+	@include box-shadow(0px 3px #e1e2e2);
+}
+.shadow{
+	@include box-shadow(0px 3px #969696);
+	&.panel{
+		margin-bottom: 3px;
+	}
+}
+.cst-dt{
+	background-color: $theme-color;
+	padding: 14px 18px 14px 51px;
+	position: relative;
+	margin-bottom: 10px;
+	@media (max-width:1400px) {
+		padding: 10px 18px 14px 10px;
+	}
+	.sl{
+		position: absolute;
+		width: 65px;
+		height: 37px;
+		background-color: #ee3e42;
+		color: #fff;
+		top: 0;
+		right: 0;
+		text-align: center;
+    	line-height: 37px;
+		&:before{
+			content: '';
+			width: 0;
+			height: 0;
+			border-bottom: 37px solid #0f385a;
+			border-right: 18px solid transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	h2{
+
+		margin:0 0 14px;
+		font-size: 16px;
+	}
+	.btn-group{
+		margin-bottom: 4px;
+		@media (max-width:767px) {
+			display: block;
+			width: 100%;
+		}
+		.btn{
+			cursor: initial;
+			-webkit-user-select: initial;
+			-moz-user-select: initial;
+			-ms-user-select: initial;
+			user-select: initial;
+			@media (max-width:1400px) {
+				font-size: 13px;
+			}
+			@media (max-width:767px) {
+				display: block;
+				@include border-radius(0);
+				width: 100%;
+			}
+			&:active{
+				@include box-shadow(inset 0 0px 0px #fff);
+			}
+		}
+		.btn-default{
+			&.text-left{
+				text-align: left !important;
+			}
+			&:hover, &:focus, &:active{
+				background-color: #fff;
+				border-color: #ccc;
+			}
+		}
+		.btn-primary{
+			background-color: #0b5ea9;
+			border-color: #0b5ea9;
+			&:hover, &:focus{
+				background-color: #0b5ea9;
+				border-color: #0b5ea9;
+			}
+		}
+	}
+	.btn-warning {
+		color: #fff;
+		background-color: #ee8e2e;
+		border-color: #ee8e2e;
+	}
+	.btn-success {
+		color: #fff;
+		background-color: #42a046;
+		border-color: #42a046;
+	}
+	&.completed{
+		background-color: #cee0ee;
+		.sl{
+			background-color: #8e959b;
+			&:before{
+				border-bottom: 37px solid #cee0ee;
+			}
+		}
+		.text-uppercase.btn-default {
+			color: #fff;
+			background-color: #8e959b;
+			border-color: #8e959b;
+		}
+		
+	}
+}
+.house-member {
+    margin: 0;
+    font-size: 20px;
+    color: #0f385a;
+}
+.panel-default>.panel-heading{
+    background-color: #e1e1e1;
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.btn.btn-cst{
+	margin-bottom: -28px;
+    margin-top: 10px;
+	width: 160px;
+	background-color: #0668b9;
+	@include box-shadow(0px 3px #0f385a);
+	@include border-radius(2px);
+	font-size: 16px;
+	position: relative;
+	&:after{
+		content: '';
+		width: 0;
+		height: 0;
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+		border-left: 14px solid #fff;
+		float: right;
+		margin-top: 3px;
+	}
+}
+body{
+	padding-bottom: 40px;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	padding-left: 230px;
+	@include transition-property(all);
+	@include transition-duration(0.4s);
+	@include transition-timing-function(ease 0s);
+	@media (max-width:1200px) {
+		padding-left: 0px;
+	}
+	
+	p{
+		margin: 0;
+		color: #000;
+		font-size: 13px;
+	}
+	.resize{
+		border-top: solid 1px #bababa;
+		padding: 5px 0;
+	}
+	a{
+		color: #cc7b29;
+	}
+	
+}
+.active .footer{
+	padding-left: 0;
+}

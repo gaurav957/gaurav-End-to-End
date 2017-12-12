@@ -1,0 +1,120 @@
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/css/stylesheet-survey.css">
+<div id="wrapper" class="survey-wrapper">
+    <header_panel :user="alldata"></header_panel>
+    <sidebar_panel :members="membersdata" :user="alldata"></sidebar_panel>
+    <survey_panel  :questions="alldata"></survey_panel>
+    <footer_panel></footer_panel>
+    <!-- Page content -->
+</div>
+<span id="surveydata" style="display: none">
+	{
+	"heading": "Rio Grand Valley Travel Study",
+	"type": "survey",
+	"userdetails": {
+		"name": "Michael",
+		"address": "Washington, DC 20502, USA",
+		"travel_date": "Mon, July 2017",
+		"sample": "9125487"
+	},
+	"questions": [{
+			"name": "Pre-Diary Survey",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+					
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"Not started"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"Completed"
+				}
+			]
+		},
+		{
+			"name": "General travel day information",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"Completed"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				}
+			]
+		},
+		{
+			"name": "Trip Diary Begin",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"Not started"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				}
+			]
+		},
+		{
+			"name": "First loop of trip diary",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				}
+			]
+		},
+		{
+			"name": "Second loop of trip diary",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress"
+				}
+			]
+		}
+
+	]
+}
+</span>
+<script src="http://e2eresearch.com/swteam/html5Tools/texas-department-transportation/js/global.min.js"></script>

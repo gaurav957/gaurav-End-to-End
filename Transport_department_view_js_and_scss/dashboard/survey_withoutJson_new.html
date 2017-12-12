@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TDT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet-surveywithoutinput.css">
+</head>
+
+<body>
+<div id="wrapper" class="survey-wrapper nojson">
+    <header_panel_new :user="alldata"></header_panel_new>
+    <!--<sidebar_panel :members="membersdata" :user="alldata"></sidebar_panel>-->
+    <div id="page-content-wrapper" class="no-transition">
+	  <div class="page-content">
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-xs-12 contentNew">
+			  <div class="white-resize">
+				<!--<survey_panel  :questions="alldata"></survey_panel>-->
+				<div class="clearfix survey-content" style="min-height: 442px;">
+					<fieldset id="fieldset_AGE18"><legend class="confirmit-hidden"></legend>
+<table  class='confirmit-table'>
+<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+  <tr>
+    <td class="input"><input type="radio" name="AGE18" id="AGE18_1" value="1"></td>
+    <td class="answerlabel"><label for="AGE18_1" id="AGE18_1_label">Yes</label></td>
+  </tr>
+  <tr>
+    <td class="input"><input type="radio" name="AGE18" id="AGE18_2" value="2" checked="checked"></td>
+    <td class="answerlabel"><label for="AGE18_2" id="AGE18_2_label">No</label></td>
+  </tr>
+</tbody></table>
+
+</fieldset> 
+					<div class="btn-cst">
+						<a href="javascript:void(0)" class="nv-bindStatics" data-pageid="Previous">Previous</a>
+						<a href="javascript:void(0)" class="nv-bindStatics" data-pageid="Next">Next</a>
+					</div>
+					<div style="display:none;">confirmit nav component</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<input type="hidden" name="Redirect_val" id="redidirectval">
+<footer_panel></footer_panel>
+<style>
+	.user-meta, .dashboardLink, .user-detail{display: none;}
+	#menu-toggle{display: none;}
+	#wrapper{padding-left: 0px;}
+	#page-content-wrapper{padding-top: 115px;}
+	@media (max-width:1200px) {
+	 #page-content-wrapper{padding-top: 65px;}
+	}
+</style>
+<!-- Page content -->
+</div>
+<span id="surveydata" style="display: none">
+	{
+	"heading": "Rio Grand Valley Travel Study",
+	"type": "survey",
+	"dashboardlink": "Dashboard",
+	"current_page":"3-1",
+	"userdetails": {
+		"userdetailStatus": "1",
+		"name": "Michael",
+		"age": "32",
+		"gender":"Male",
+		"address": "Washington, DC 20502, USA",
+		"travel_date": "Mon, July 2017",
+		"sample": "9125487",
+		"tripFromaddress":"Atlanta, GA 30318",
+		"tripFromdate":"03 Jul 2017 20:21",
+		"tripToaddress":"Atlanta, GA 30318",
+		"tripTodate":"03 Jul 2017 20:21"
+	},
+	"questions": [{
+			"name": "Pre-Diary Survey",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"98",
+					"Page_id": "1-1"
+					
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"Not started",
+					"Page_id": "1-2"
+					
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"Completed",
+					"Page_id": "1-3"
+				}
+			]
+		},
+		{
+			"name": "General travel day information",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"Completed",
+					"Page_id": "2-1"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "2-2"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "2-3"
+				}
+			]
+		},
+		{
+			"name": "Trip Diary Begin",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"Not Completed",
+					"Page_id": "3-1"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "3-2"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "3-3"
+				}
+			]
+		},
+		{
+			"name": "First loop of trip diary",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "4-1"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "4-2"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "4-3"
+				}
+			]
+		},
+		{
+			"name": "Second loop of trip diary",
+			"sublink": [{
+					"title": "Background Info",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "5-1"
+				},
+				{
+					"title": "Education",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "5-2"
+				},
+				{
+					"title": "Labor Force",
+					"link": "javascript:void(0)",
+					"status":"In-progress",
+					"Page_id": "5-3"
+				}
+			]
+		}
+
+	]
+}
+</span>
+
+<script src="js/global.min.js"></script>
+</body>
+</html>
