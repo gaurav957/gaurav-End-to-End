@@ -71,3 +71,24 @@ body{}
 	box-shadow: 0px 5px 0px 0px #8B2B2B;
 }
 
+.like-btn{
+	display: inline-block;
+    padding: 10px;
+    background: green;
+    cursor: pointer;
+    border: 2px solid white;
+    outline: 2px solid green;
+	color:#fff;
+}
+
+
+.dislike-btn{
+	display: inline-block;
+	padding: 10px;
+	background: red;
+	cursor: pointer;
+	border: 2px solid white;
+    outline: 2px solid red;
+	color:#fff;
+}
+

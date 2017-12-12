@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
 	
-	var aurl = url.split('|');
+	//var aurl = url.split('|');
 //	var alisTxt = lisTxt.split("|");
 	//var h1Str = h1.split(" ");
 	var aoutput = [];
@@ -10,18 +10,18 @@ $(document).ready(function(){
 	//var spanStr3 = spanTxt3.split(" ");
 	//var spanStr4 = spanTxt4.split(" ");
 	
-	var alist = [];
+	//var alist = [];
 	var len = 0;
-	var num = 0;
+	//var num = 0;
 	var aImg = []
-	var count = 1;
+	var count = 1; 
 	
 	$("#removeCl").html(TextNone); //none of these txt pass
 	
-			for(var a=0; a<aurl.length;a++){
+			/* for(var a=0; a<aurl.length;a++){
 					aImg[a] = '';
 					
-			}
+			} */
 			outputdata('');
 //			for(var a=0; a<alisTxt.length;a++){
 //				var li = alisTxt[a].split(" ");
@@ -31,8 +31,11 @@ $(document).ready(function(){
 //			}
 			
    			//len = h1Str.length+spanStr.length+spanStr2.length+spanStr3.length+alist.length+spanStr4.length;
+			
 			len =spanStr2.length;
-			for(var m=0;m<len; m++){aoutput[m]=""};
+			for(var m=0;m<len; m++)
+			{aoutput[m]=""};
+		
 		////for single			
 			if(likeStr == "1"){
 					/*for(var i=0	; i<h1Str.length; i++){
@@ -41,9 +44,9 @@ $(document).ready(function(){
 					for(var j=0; j<spanStr.length;j++){
 						$("#spanText").append("<span class='SingNoCk' data-info='"+count+++"'>" +spanStr[j]+ "</span>"+" ");
 					}*/
-					for(var t=0; t<spanStr2.length;t++){
+					/* for(var t=0; t<spanStr2.length;t++){
 						$("#spanText2").append("<span class='SingNoCk' data-info='"+count+++"'>" +spanStr2[t]+ "</span>"+" ");
-					}
+					} */
 					/*for(var n=0; n<spanStr3.length;n++){
 						$("#spanText3").append("<span class='SingNoCk' data-info='"+count+++"'>" +spanStr3[n]+ "</span>"+" ");
 					}*/
@@ -58,10 +61,10 @@ $(document).ready(function(){
 //					for(var o=0; o<spanStr4.length;o++){
 //						$("#spanText4").append("<span class='SingNoCk' data-info='"+count+++"'>" +spanStr4[o]+ "</span>"+" ");
 //					}					
-					for(var l=0; l<aurl.length;l++){
+					/* for(var l=0; l<aurl.length;l++){
 						$("#image").append("<span id='img"+l+"' class='SngimgnoCk' data-info='"+num+++"'><img src='"+aurl[l]+"'></span>"+"</img>");
-					}
-					$("span,img").click(function () {
+					} */
+					/* $("span,img").click(function () {
 						 if ($(this).hasClass("SingNoCk")){
 								$(this).removeClass("SingNoCk");
 								$(this).addClass("Singlike");
@@ -83,12 +86,13 @@ $(document).ready(function(){
 								imgoutput($(this),"");
 							  }
 							  $(".noneVal").val("");
-					});				
+					}); */				
 			}
 ////close single				
 //start double			
 			else if(likeStr == "2"){
-					var valueForColor=0;
+					var valueForColor=0; //Set color based on like box click or dislike box click
+					
 					//else if starts
 					/*for(var i=0	; i<h1Str.length; i++){
 						$("#h1Text").append("<span class='noCk' data-info='"+count+++"'>" +h1Str[i]+ "</span>"+" ");
@@ -113,9 +117,9 @@ $(document).ready(function(){
 //					for(var o=0; o<spanStr4.length;o++){
 //						$("#spanText4").append("<span class='noCk' data-info='"+count+++"'>" +spanStr4[o]+ "</span>"+" ");
 //					}								
-					for(var l=0; l<aurl.length;l++){
+					/* for(var l=0; l<aurl.length;l++){
 						$("#image").append("<span id='img"+l+"' class='imgnoCk' data-info='"+num+++"'><img src='"+aurl[l]+"'></span>"+"</img>");
-					}
+					} */
 			/*	function abc(){
 					$("span,img").click(function () {
 						 if ($(this).hasClass("noCk")){
@@ -152,139 +156,30 @@ $(document).ready(function(){
 					});
 			}*/
 				
-					function greenselection(){
-						if(valueForColor == 1){
-							console.log("green called");
-					   $("span,img").click(function () {
-						    if ($(this).hasClass("noCk")){
-								console.log("has class noclk");
-								$(this).removeClass("noCk");
-								$(this).addClass("like");
-								output($(this),1);
-							  }
-						else if ($(this).hasClass("like")){
-							console.log("has class like");
-								$(this).removeClass("like");
-								$(this).addClass("noCk");
-								output($(this),"");
-							  }
-						
-						else if ($(this).hasClass("Dislike")){
-							console.log("has class dislike");
-								$(this).removeClass("Dislike");
-								$(this).addClass("like");
-								output($(this),2);
-							  }
-					   
-						
-						
-						
-						
-						 else if ($(this).hasClass("imgnoCk")){
-								$(this).removeClass("imgnoCk");
-								$(this).addClass("imglike");
-								imgoutput($(this),1);
-							  }
-						 else if ($(this).hasClass("imglike")){
-								$(this).removeClass("imglike");
-								$(this).addClass("imgdislike");
-								imgoutput($(this),2);
-							  } 
-						 else if ($(this).hasClass("imgdislike")){
-								$(this).removeClass("imgdislike");
-								$(this).addClass("imgnoCk");
-								imgoutput($(this),"");
-							  }
-							  $(".noneVal").val("");
-					});
-			}
-					}
-				
-				
-					function redselection(){
-						console.log("red called");
-						if(valueForColor == 2){
-					   $("span,img").click(function () {
-						   if ($(this).hasClass("like")){
-							   console.log("has class like");
-								$(this).removeClass("like");
-								$(this).addClass("Dislike");
-								output($(this),"");
-							  }
-						
-						else if ($(this).hasClass("noCk")){
-							console.log("has class noclk");
-								$(this).removeClass("noCk");
-								$(this).addClass("Dislike");
-								output($(this),2);
-							  }
-						
-						else if ($(this).hasClass("Dislike")){
-							console.log("has class dislike");
-								$(this).removeClass("Dislike");
-								$(this).addClass("noCk");
-								output($(this),"");
-							  }
-						
-/*						else if ($(this).hasClass("like")){
-								$(this).removeClass("like");
-								$(this).addClass("Dislike");
-								output($(this),2);
-							  }*/
-						
-						 
-						
-						
-						/* else if ($(this).hasClass("like")){
-								$(this).removeClass("like");
-								$(this).addClass("Dislike");
-								output($(this),2);
-							  }
-						 else if ($(this).hasClass("Dislike")){
-								$(this).removeClass("Dislike");
-								$(this).addClass("noCk");
-								output($(this),"");
-							  }*/
-						 else if ($(this).hasClass("imgnoCk")){
-								$(this).removeClass("imgnoCk");
-								$(this).addClass("imglike");
-								imgoutput($(this),1);
-							  }
-						 else if ($(this).hasClass("imglike")){
-								$(this).removeClass("imglike");
-								$(this).addClass("imgdislike");
-								imgoutput($(this),2);
-							  } 
-						 else if ($(this).hasClass("imgdislike")){
-								$(this).removeClass("imgdislike");
-								$(this).addClass("imgnoCk");
-								imgoutput($(this),"");
-							  }
-							  $(".noneVal").val("");
-					});
-			}
-					}
-				$(".green-btn").click(function(){
+					
+					
+				$(".like-btn").click(function(){
 					valueForColor = 1;
 					selection();
-					console.log("green");
+					//console.log("green");
 	            });
-				$(".red-btn").click(function(){
+				
+				$(".dislike-btn").click(function(){
 					valueForColor = 2;
 					selection();
-					console.log("red btn");
+					//console.log("red btn");
 	            });
 				
 				function selection(){
 
 					$("span,img").unbind("click").click(function () {
-					console.log(valueForColor);
+					//console.log(valueForColor);
 						if(valueForColor == 2){
 							 if ($(this).hasClass("like")){
 							   console.log("has class like");
 								$(this).removeClass("like");
 								$(this).addClass("Dislike");
-								output($(this),"");
+								output($(this),2);
 							  }
 						
 						else if ($(this).hasClass("noCk")){
@@ -322,7 +217,7 @@ $(document).ready(function(){
 							console.log("has class dislike");
 								$(this).removeClass("Dislike");
 								$(this).addClass("like");
-								output($(this),2);
+								output($(this),1);
 							  }
 							
 						}
@@ -336,6 +231,7 @@ $(document).ready(function(){
 		outputValue(aoutput, aImg, none);
 	}
 	function output(This,val){
+		//console.log("This::"+This+"::val::"+val);
 						aoutput[This.attr("data-info")-1] = val;
 						outputdata('');
 	}
@@ -345,11 +241,12 @@ $(document).ready(function(){
 	}
 	
 	$("#removeCl").click(function(){
-		for(var a=0; a<aurl.length;a++){
+		/* for(var a=0; a<aurl.length;a++){
 				aImg[a] = "";
-		}
+		} */
 		for(var m=0;m<len; m++){aoutput[m]=""};
-
+		
+		//All html tags get their classes reset below
 		if($("#spanText2 > span").hasClass("Dislike") || $("#spanText2 > span").hasClass("like")){
 			$("#spanText2 > span").removeClass("Dislike");
 			$("#spanText2 > span").removeClass("like");
