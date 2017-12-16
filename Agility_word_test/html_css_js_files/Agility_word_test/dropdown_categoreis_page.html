@@ -22,7 +22,9 @@
 				<div class="inner-resize-container">
 					<div class="dropdown-categories">
                          <div class="welcome-txt "><h1 class="welcome-txtInner">Some information about me/my organization:</h1></div>
-						 <drop-down-panel :drop-down-details="dropdowndata"></drop-down-panel>
+					</div>
+					<drop-down-panel :drop-down-details="dropdowndata"></drop-down-panel>
+					<div class="dropdown-categories">
                           <div class="select-categories-inner marTop">
                             <select name="slct" id="slct">
                               <option>Sector</option>
@@ -70,12 +72,25 @@
 				"defaultOption":"Sector",
 				"optionAndId":[
 					{
-					"option1":"Pure CSS",
-					"id":"sector_1"	
+					"option":"Pure html",
+					"targetId":"sector_1"	
 					},
 					{
-					"option2":"No JS",
-					"id":"sector_2"
+					"option":"No CSS",
+					"targetId":"sector_2"
+					}
+				]
+			},
+						{
+				"defaultOption":"Sector",
+				"optionAndId":[
+					{
+					"option":"Pure html",
+					"targetId":"sector_1"	
+					},
+					{
+					"option":"No CSS",
+					"targetId":"sector_2"
 					}
 				]
 			}

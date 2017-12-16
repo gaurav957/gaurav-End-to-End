@@ -11,15 +11,27 @@ Vue.component('header-panel', {
 
 Vue.component('drop-down-panel', {
 	props:['dropDownDetails'],
+	data: function () {
+	  return {
+		selected: ''
+	  }
+	},
 	//template:'<div><div v-for="dropDown in dropDownDetails">{{dropDown.defaultOption}}</div></div>'
-	template:'  <div class="select-categories-inner marTop">\
-                    <select name="slct" id="slct" v-for="dropDown in dropDownDetails">\
-						<option>{{dropDown.defaultOption}}</option>\
-                        <option value="1">Pure CSS</option>\
-                        <option value="2">No JS</option>\
-                        <option value="3">Nice!</option>\
-                    </select>\
-                </div>'
+	template:'  <div class="dropdown-categories">\
+					<div class="select-categories-inner marTop fromvue" v-for="(dropDown,index) in dropDownDetails">\
+						<select v-model="selected" @change="dosomething(selected)" name="slct" id="slct">\
+							<option v-if="dropDown.defaultOption!=null" value=""	disabled selected>{{dropDown.defaultOption}}</option>\
+							<option v-for="optiona in dropDown.optionAndId" :value="optiona.targetId" >{{optiona.option}}</option>\
+						</select>\
+					</div>\
+					</div>',
+	methods:{
+		dosomething : function(slctTargetId){
+			var slctTargetId = slctTargetId;
+			console.log(slctTargetId);
+			$("#"+slctTargetId).click();
+		}
+	}
 });
 
 Vue.component('event-name-panel',{
@@ -81,7 +93,7 @@ var categorizationObj = new Vue({
 		if($('#jsonData').length){
 			this.alldata = JSON.parse($('#jsonData').text().trim());
 			this.dropdowndata = this.alldata.dropDownDetails;
-			console.log("dropdowndata::"+this.dropdowndata[0].optionAndId[0].option1);
+			console.log("dropdowndata::"+this.dropdowndata[0].optionAndId[0].option);
 			
 		}
 	
