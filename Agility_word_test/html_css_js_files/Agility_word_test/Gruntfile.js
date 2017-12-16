@@ -4,25 +4,24 @@ module.exports = function(grunt) {
 grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    concat: {
+    /*concat: {
         // Configuration for concatinating files goes here.
         dist: {
             src: [
-                    'script/custom_script.js'
-                    
+                    'script/custom_script.js'       
                     
             ],
             dest: 'js/production/global.js',
         },
-    },
+    },*/
 
-    uglify: {
+  /*  uglify: {
         build: {
-            src: 'js/production/global.js',
-            dest: 'js/production/global.min.js',
+            src: 'js/production/spash_intro.js',
+            dest: 'js/production/spash_intro.min.js',
         },
     },
-
+*/
 
     imagemin: {
         dynamic: {
@@ -54,23 +53,17 @@ grunt.initConfig({
     },
 
     watch: {
-        scripts: {
-            files: ['js/**/**.js'],
-            tasks: ['concat', 'uglify'],
-            options: {
-                spawn: false,
-            },
-        },
+       // scripts: {
+           // files: ['script/**/**.js'],
+           // tasks: ['concat', 'uglify']
+      //  },
         images: {
             files: ['dev-img/**.{png,jpg,gif}'],
-            tasks: ['imagemin'],
-            options: {
-                spawn: false,
-            }
+            tasks: ['imagemin']
         },
         compass: {
             files: ['**/*.{scss,scss}'],
-            tasks: ['compass:dev'],
+            tasks: ['compass:dev']
         }
 
     },
@@ -86,6 +79,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-compass');
 
 // Where we tell Grunt what to do when we type "grunt" into the terminal.
-grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'compass', 'watch']);
+//grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'compass', 'watch']);//with concat and uglify
+grunt.registerTask('default', ['imagemin', 'compass', 'watch']);
 
 };

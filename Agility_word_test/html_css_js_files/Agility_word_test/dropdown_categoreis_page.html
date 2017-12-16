@@ -10,7 +10,7 @@
 
 <body>
 <!--main wrapper begining-->
-	<div class="container-wrapper">
+	<div class="container-wrapper" id="categorize-input">
 		<div class="container-inner">
 		<!--header begining-->
 			<header class="header-nav header-nav-bg remove-header">
@@ -21,7 +21,8 @@
 			<div class="inner-content">
 				<div class="inner-resize-container">
 					<div class="dropdown-categories">
-                         <div class="welcome-txt "><h1 class="welcome-txtInner">Some information about me/my organiztion:</h1></div>
+                         <div class="welcome-txt "><h1 class="welcome-txtInner">Some information about me/my organization:</h1></div>
+						 <drop-down-panel :drop-down-details="dropdowndata"></drop-down-panel>
                           <div class="select-categories-inner marTop">
                             <select name="slct" id="slct">
                               <option>Sector</option>
@@ -30,6 +31,7 @@
                               <option value="3">Nice!</option>
                             </select>
                           </div>
+						  
                            <div class="select-categories-inner marTop20">
                             <select name="slct" id="slct2">
                               <option>Function </option>
@@ -38,6 +40,7 @@
                               <option value="3">Nice!</option>
                             </select>
                           </div>
+						  
                         <div class="select-categories-inner marTop20">
                             <select name="slct" id="slct3">
                               <option>Activity area</option>
@@ -45,17 +48,96 @@
                               <option value="2">No JS</option>
                               <option value="3">Nice!</option>
                             </select>
-                          </div>
-                       </div>
-					</div>
-				</div>
-				<div class="btn-footer">
-					 <div class="start-btn"><span>NEXT</span> </div>
+                        </div>
+						
+                    </div>
 				</div>
 			</div>
-			<!--survey content End-->
+			<div class="btn-footer">
+				<div class="start-btn"><span>NEXT</span> </div>
+			</div>
 		</div>
+			<!--survey content End-->
 	</div>
 	<!--main wrapper End-->
+<span id="jsonData" style="display: none">
+	{
+		"leftTopIntroImg1":"images/mck_logo_inner.jpg",
+		"leftTopIntroImg2":"images/logo_agility.jpg",
+		"infoTxt":"Some information about me/my organization:",
+		"dropDownDetails":[
+			{
+				"defaultOption":"Sector",
+				"optionAndId":[
+					{
+					"option1":"Pure CSS",
+					"id":"sector_1"	
+					},
+					{
+					"option2":"No JS",
+					"id":"sector_2"
+					}
+				]
+			}
+		],
+		"nextBtnData":{
+			"startBtnTxt":"Next",
+			"Target":"forwardbutton"	
+		}
+	}
+</span>
+	<div style="display:block;">
+	<div>
+<fieldset id="fieldset_sector"><table cellspacing="0" summary="Answers of sector. Column number 1">
+<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+  <tr>
+    <td class="input"><input tabindex="1" type="radio" name="sector" id="sector_1" value="1"></td>
+    <td class="answerlabel"><label for="sector_1" id="sector_1_label">Sector 1 - TBD</label></td>
+  </tr>
+  <tr>
+    <td class="input"><input tabindex="2" type="radio" name="sector" id="sector_2" value="2"></td>
+    <td class="answerlabel"><label for="sector_2" id="sector_2_label">Sector 2 - TBD</label></td>
+  </tr>
+</tbody></table>
+
+</fieldset>
+</div>
+
+<div>
+<fieldset id="fieldset_function1"><table cellspacing="0" summary="Answers of function1. Column number 1">
+<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+  <tr>
+    <td class="input"><input tabindex="3" type="radio" name="function1" id="function1_1" value="1"></td>
+    <td class="answerlabel"><label for="function1_1" id="function1_1_label">TBD 1</label></td>
+  </tr>
+  <tr>
+    <td class="input"><input tabindex="4" type="radio" name="function1" id="function1_2" value="2"></td>
+    <td class="answerlabel"><label for="function1_2" id="function1_2_label">TBD 2</label></td>
+  </tr>
+</tbody></table>
+
+</fieldset>
+</div>
+
+<div>
+<fieldset id="fieldset_industry"><table cellspacing="0" summary="Answers of industry. Column number 1">
+<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+  <tr>
+    <td class="input"><input tabindex="5" type="radio" name="industry" id="industry_1" value="1"></td>
+    <td class="answerlabel"><label for="industry_1" id="industry_1_label">TBD 1</label></td>
+  </tr>
+  <tr>
+    <td class="input"><input tabindex="6" type="radio" name="industry" id="industry_2" value="2"></td>
+    <td class="answerlabel"><label for="industry_2" id="industry_2_label">TBD 2</label></td>
+  </tr>
+</tbody></table>
+
+</fieldset>
+</div>
+</div>
+<script src="js/vendor/vue.js" type="text/javascript"></script>
+<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="js/production/categories_page.js" type="text/javascript"></script>
+<script src="js/production/categories_page_jquery.js" type="text/javascript"></script>
 </body>
 </html>
