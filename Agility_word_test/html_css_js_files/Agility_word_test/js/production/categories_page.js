@@ -10,21 +10,18 @@ Vue.component('header-panel', {
 });
 
 Vue.component('drop-down-panel', {
-	props:['dropDownDetails'],
-	data: function () {
-	  return {
-		selected: ''
-	  }
-	},
-	//template:'<div><div v-for="dropDown in dropDownDetails">{{dropDown.defaultOption}}</div></div>'
-	template:'  <div class="dropdown-categories">\
-					<div class="select-categories-inner marTop fromvue" v-for="(dropDown,index) in dropDownDetails">\
-						<select v-model="selected" @change="dosomething(selected)" name="slct" id="slct">\
+	props:['dropDownDetails','user'],
+	template:'<div class="container-inner"><!--survey content begining--><div class="inner-content"><div class="inner-resize-container"><div class="dropdown-categories">\
+	<div class="welcome-txt "><h1 class="welcome-txtInner" v-html="user.infoTxt"></h1></div>\
+	</div>\
+					<div class="dropdown-categories">\
+					<div class="select-categories-inner marTop fromvue" v-for="dropDown in dropDownDetails">\
+						<select @change="dosomething($event.target.value)">\
 							<option v-if="dropDown.defaultOption!=null" value=""	disabled selected>{{dropDown.defaultOption}}</option>\
 							<option v-for="optiona in dropDown.optionAndId" :value="optiona.targetId" >{{optiona.option}}</option>\
 						</select>\
 					</div>\
-					</div>',
+					</div></div></div></div>',
 	methods:{
 		dosomething : function(slctTargetId){
 			var slctTargetId = slctTargetId;
@@ -34,33 +31,16 @@ Vue.component('drop-down-panel', {
 	}
 });
 
-Vue.component('event-name-panel',{
-	props:['eventInnerContent'],
+Vue.component('next-btn-panel',{
+	props:['user'],
 	  data: function () {
   return {
     inputBoxTxt: ''
   }
 },
-	template:'<div class="container-inner">\
-			 <!--survey content begining-->\
-			<div class="inner-content">\
-				<div class="inner-resize-container">\
-					<div class="welcome-info">\
-						<div class="welcome-txt  marTop104"><h1 class="welcome-txtInner" v-html="eventInnerContent.eventQuery.eventQueryText"></h1></div>\
-                        <div class="event-input">\
-                            <input type="text" class="event-input-user" v-bind:placeholder="eventInnerContent.eventQuery.eventInputPlaceholder" v-model="inputBoxTxt">\
-                        </div>\
-						<div class="term-condition text-info-label">\
-							<span class="term-condition-info text-info-label-inner" v-html="eventInnerContent.eventQuery.eventBelowInsText"></span>\
-						</div>\
-					</div>\
-				</div>\
-				<div class="btn-footer">\
-					 <div class="start-btn" v-on:click="setInputValue(eventInnerContent.eventQuery.eventInputBoxTarget),nextPage(eventInnerContent.eventQuery.eventTargetElement)"><span v-html="eventInnerContent.eventQuery.eventBtnText">NEXT</span> </div>\
-				</div>\
-			</div>\
-			<!--survey content End-->\
-		</div>',
+	template:'<div class="btn-footer">\
+				<div class="start-btn"><span v-html="user.nextBtnData.startBtnTxt"></span> </div>\
+			</div>',
 	methods:{
 		nextPage : function(forwardBtnId){
 						//console.log("forward called");
@@ -93,7 +73,7 @@ var categorizationObj = new Vue({
 		if($('#jsonData').length){
 			this.alldata = JSON.parse($('#jsonData').text().trim());
 			this.dropdowndata = this.alldata.dropDownDetails;
-			console.log("dropdowndata::"+this.dropdowndata[0].optionAndId[0].option);
+			//console.log("dropdowndata::"+this.dropdowndata[0].optionAndId[0].option);
 			
 		}
 	
