@@ -1,0 +1,24 @@
+.header-nav{
+	width:100%;
+	& > .nav-logo{
+		width:105px;
+		float: left;
+		padding: 15px;
+     }
+}
+
+.remove-header{
+	@media (max-width: 767px){
+		 display: none;
+	  }
+}
+.btn-footer{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	@media (max-width: 767px){
+		 position: fixed;
+	  }
+}

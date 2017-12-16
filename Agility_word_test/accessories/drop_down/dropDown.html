@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+
+.selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/  
+  float: left;
+  min-width: 200px;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+display: none;
+}
+
+.selectdiv:after {
+  content: '\25BC';
+  right: 11px;
+  /*Adjust for position however you want*/
+  /*color:white;*/
+  top: 18px;
+  padding: 0 0 2px;
+  /*left line */  
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="selectdiv">
+  <label>
+      <select>
+          <option selected> Select Box </option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Last long option</option>
+      </select>
+  </label>
+</div>
+</body>
+</html>

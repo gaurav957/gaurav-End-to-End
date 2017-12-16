@@ -1,0 +1,66 @@
+
+
+
+.start-btn{
+	width: 220px;
+    display: inline-block;
+    height: 45px;
+    background: $start-btn-bg;
+    color: $white;
+    font-weight: bold;
+    font-size: 22px;
+    @include transition-property(all);
+	@include transition-duration(0.3s);
+	@include transition-timing-function(ease-in);
+	cursor: pointer;
+	@media (max-width: 767px){
+		 width: 100%;
+	  }
+	  span{
+		  position: relative;
+		  top: 22%;
+		  transform: translateY(-22%);
+    }
+	 &:hover{
+	    background: $start-btn-bg-hover;
+     }
+}
+
+
+
+
+
+/*.clearbtn{
+	background-color: transparent !important;
+	color: #f5a959;
+	
+}
+.btn, .form-control{
+	@include border-radius(0);
+}
+
+.btn-clear{
+	border: solid 2px #4da8d4;
+	color: #4da8d4;
+	&.btn-orange{
+		color: $orange;
+		border-color: $orange;
+		&:hover{
+			background-color: $light-orange;
+			color: $black;
+		}
+	}
+	&:hover{
+		background-color: #4da8d4;
+	}
+}
+.btn{
+	@include border-radius(0);
+	&:focus{
+		outline: none;
+		&:active{
+			outline: none;
+		}
+	}
+	
+}*/

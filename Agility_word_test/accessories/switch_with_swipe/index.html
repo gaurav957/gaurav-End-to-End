@@ -1,0 +1,141 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/jquery-min.js"></script>
+<script src="js/jquery-mobile.js"></script>
+<title>switch radio</title>
+
+	<style>
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+		.switch-btn-custom{
+			position: relative;
+		}
+		input#on1 {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+		input#off1 {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+		label.right-box {
+    background: #4CAF50;
+    width: 50%;
+    float: left;
+    height: 41px;
+    text-align: right;
+    padding-right: 5px;
+	display: block;
+	border-bottom-right-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-right: 11px;
+    line-height: 35px;
+    color: #fff;
+	cursor: pointer;
+}
+		label.left-box {
+    background: red;
+    width: 50%;
+    float: left;
+    height: 41px;
+    display: block;
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 18px;
+    padding-left: 11px;
+    line-height: 35px;
+    color: #fff;
+	cursor: pointer;
+}
+		div#list1 {
+    display: inline-block;
+    position: absolute;
+    left: 35%;
+    top: 1%;
+    background: #fff;
+    padding: 11px;
+    border-radius: 25px;
+    width: 75px;
+    text-align: center;
+	cursor: pointer;
+	z-index: 777777;
+}
+.layer-disable{
+	display: inline-block;
+	width: 67px;
+	position: absolute;
+	z-index: 33333;
+	background: transparent;
+	height: 41px;
+	left: 37%;
+}
+		.switch-radiobtn {
+    overflow: hidden;
+}
+		.ui-loader{
+			display:none;
+		}
+		.ui-page{
+			min-height: inherit !important;
+		}
+		.switch-btn-custom{
+			
+			width:235px; border-radius: 18px; margin: 50px auto;
+		}
+	</style>
+<script>
+$(document).ready(function(){
+	var arrleft = ["-35%","40%"];
+	
+		
+   $(".amit").on("click", function(){
+	   var currentId = $(this).attr("data-info");
+	  //console.log(currentId);
+	  
+	   //var nob = $(this).siblings();
+	 $(".lists").animate({"margin-left":arrleft[currentId-1]});
+	    
+   })
+   
+   
+});
+</script>
+
+<script>
+		$(function(){
+			var arrleft = ["-35%","40%"];
+		  // Bind the swipeHandler callback function to the swipe event on div.box
+		  $( ".lists" ).on( "swiperight", swipeHandlerRight );
+			$( ".lists" ).on( "swipeleft", swipeHandlerLeft );
+
+		  // Callback function references the event target and adds the 'swipe' class to it
+		  function swipeHandlerRight( event ){
+			$( this ).addClass( "swipeRight" ).animate({"margin-left":arrleft[1]});
+		  }
+			function swipeHandlerLeft( event ){
+			$( this ).addClass( "swipeLeft" ).animate({"margin-left":arrleft[0]});;
+		  }
+		});
+</script>
+</head>
+
+<body>
+<div class="switch-btn-custom">
+	<div class="switch-radiobtn">
+	 <div id="list1" class="lists"><div id="item1" class='list1Items'>Item 1</div></div>
+		<div class="layer-disable"></div>
+		 <input id="on1" name="state-id" type="radio" checked="">
+         <label for="on1" onclick="" class="left-box amit" data-info="1">ON</label>
+		<input id="off1" name="state-id" type="radio">
+		<label for="off1" onclick="" class="right-box amit" data-info="2">OFF</label>
+	</div>
+</div>
+</body>
+</html>
