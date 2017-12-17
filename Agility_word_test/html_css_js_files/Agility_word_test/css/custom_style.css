@@ -15,6 +15,7 @@
     transform: translate(0, -50%);
   }
 }*/
+/* line 1, ../scss/custom/_buttons.scss */
 .start-btn {
   width: 220px;
   display: inline-block;
@@ -38,19 +39,23 @@
   cursor: pointer;
 }
 @media (max-width: 767px) {
+  /* line 1, ../scss/custom/_buttons.scss */
   .start-btn {
     width: 100%;
   }
 }
+/* line 17, ../scss/custom/_buttons.scss */
 .start-btn span {
   position: relative;
   top: 22%;
   transform: translateY(-22%);
 }
+/* line 22, ../scss/custom/_buttons.scss */
 .start-btn:hover {
   background: #44cbfe;
 }
 
+/* line 27, ../scss/custom/_buttons.scss */
 .switch-btn-custom .nob-btn {
   display: inline-block;
   position: absolute;
@@ -63,7 +68,7 @@
   height: 40px;
   text-align: center;
   cursor: pointer;
-  z-index: 777777;
+  z-index: 777;
 }
 
 /*.clearbtn{
@@ -100,6 +105,7 @@
 	}
 	
 }*/
+/* line 1, ../scss/custom/_common.scss */
 * {
   margin: 0;
   padding: 0;
@@ -108,22 +114,27 @@
   box-sizing: border-box;
 }
 
+/* line 6, ../scss/custom/_common.scss */
 body {
   font-family: "Lato", sans-serif;
 }
 
+/* line 10, ../scss/custom/_common.scss */
 .clearfix:before, .clearfix:after, .container-wrapper:before, .container-wrapper:after, .container-innerm:before, .container-innerm:after, .header-nav:before, .header-nav:after {
   content: '';
   display: table;
 }
+/* line 14, ../scss/custom/_common.scss */
 .clearfix:after, .container-wrapper:after, .container-innerm:after, .header-nav:after {
   clear: both;
 }
 
+/* line 18, ../scss/custom/_common.scss */
 .container-wrapper {
   width: 100%;
-  position: relative;
+  position: inherit;
 }
+/* line 21, ../scss/custom/_common.scss */
 .container-wrapper .intro-page {
   width: 100%;
   height: 100%;
@@ -131,6 +142,7 @@ body {
   background: #00adef;
   z-index: 777;
 }
+/* line 27, ../scss/custom/_common.scss */
 .container-wrapper .intro-page .logo-home {
   position: absolute;
   left: 50%;
@@ -138,52 +150,61 @@ body {
   transform: translate(-50%, -50%);
 }
 @media (min-width: 768px) {
+  /* line 34, ../scss/custom/_common.scss */
   .container-wrapper .container-inner {
     width: 750px;
     margin: 0 auto;
   }
 }
 @media (min-width: 993px) {
+  /* line 34, ../scss/custom/_common.scss */
   .container-wrapper .container-inner {
     width: 975px;
     margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
+  /* line 34, ../scss/custom/_common.scss */
   .container-wrapper .container-inner {
     width: 1280px;
     margin: 0 auto;
   }
 }
 
+/* line 49, ../scss/custom/_common.scss */
 .rowgutter {
   margin-left: -15px;
   margin-right: -15px;
 }
 
+/* line 54, ../scss/custom/_common.scss */
 .inner-content {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
 }
+/* line 59, ../scss/custom/_common.scss */
 .inner-content .inner-resize-container {
   position: relative;
   padding-bottom: 70px;
 }
 @media (max-width: 767px) {
+  /* line 59, ../scss/custom/_common.scss */
   .inner-content .inner-resize-container {
     padding-bottom: 98px;
   }
 }
 
 /*welcome page style begining*/
+/* line 68, ../scss/custom/_common.scss */
 .welcome-info {
   width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 @media (max-width: 767px) {
+  /* line 68, ../scss/custom/_common.scss */
   .welcome-info {
     width: calc(100% - 10px);
     overflow: hidden;
@@ -191,20 +212,24 @@ body {
   }
 }
 
+/* line 78, ../scss/custom/_common.scss */
 .display-none {
   display: none;
 }
 
+/* line 82, ../scss/custom/_common.scss */
 .welcome-txt > .welcome-txtInner {
   margin-top: 56px;
 }
 @media (max-width: 767px) {
+  /* line 82, ../scss/custom/_common.scss */
   .welcome-txt > .welcome-txtInner {
     margin-top: 36px;
   }
 }
 
 @media (max-width: 767px) {
+  /* line 90, ../scss/custom/_common.scss */
   .home-screeIcon > figure {
     text-align: left;
     margin-left: -112px;
@@ -212,39 +237,47 @@ body {
   }
 }
 @media (max-width: 767px) {
+  /* line 96, ../scss/custom/_common.scss */
   .home-screeIcon > figure > img {
     width: 100%;
   }
 }
 
+/* line 104, ../scss/custom/_common.scss */
 .marTop104 {
   margin-top: 104px;
 }
 @media (max-width: 767px) {
+  /* line 104, ../scss/custom/_common.scss */
   .marTop104 {
     margin-top: 193px;
   }
 }
 
+/* line 111, ../scss/custom/_common.scss */
 .text-info-label-inner {
   color: #8d8d8d;
   font-size: 14px;
 }
 
+/* line 115, ../scss/custom/_common.scss */
 .text-info-label {
   padding-top: 30px;
 }
 
+/* line 120, ../scss/custom/_common.scss */
 .text-info-label .term-condition-info > .termcondition-nav {
   color: #7583ec;
 }
 
 /*welcome page style End*/
 /*input event page style begining*/
+/* line 128, ../scss/custom/_common.scss */
 .event-input {
   padding-top: 50px;
 }
 
+/* line 131, ../scss/custom/_common.scss */
 input.event-input-user {
   width: 100%;
   border-top: none;
@@ -256,6 +289,7 @@ input.event-input-user {
   color: #8d8d8d !important;
   padding: 35px 2px 23px 2px;
 }
+/* line 141, ../scss/custom/_common.scss */
 input.event-input-user::-webkit-input-placeholder {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -272,6 +306,7 @@ input.event-input-user::-webkit-input-placeholder {
   font-size: 1.5em;
   color: #8d8d8d !important;
 }
+/* line 148, ../scss/custom/_common.scss */
 input.event-input-user:focus::-webkit-input-placeholder {
   color: #8e8e8e !important;
   font-weight: normal !important;
@@ -282,10 +317,12 @@ input.event-input-user:focus::-webkit-input-placeholder {
 
 /*input event page style End*/
 /*image-shocase style begining*/
+/* line 160, ../scss/custom/_common.scss */
 .image-shocase {
   position: relative;
 }
 @media (min-width: 768px) {
+  /* line 160, ../scss/custom/_common.scss */
   .image-shocase {
     width: 700px;
     margin: 20px auto 0px;
@@ -293,6 +330,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   }
 }
 @media (max-width: 767px) {
+  /* line 160, ../scss/custom/_common.scss */
   .image-shocase {
     width: 90%;
     margin: 0 auto;
@@ -300,11 +338,13 @@ input.event-input-user:focus::-webkit-input-placeholder {
   }
 }
 
+/* line 173, ../scss/custom/_common.scss */
 .left-imageInner, .right-imageresponse {
   padding-left: 15px;
   padding-right: 15px;
 }
 
+/* line 177, ../scss/custom/_common.scss */
 .left-imageInner {
   max-width: 400px;
   width: 100%;
@@ -314,6 +354,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   position: relative;
 }
 @media (max-width: 767px) {
+  /* line 177, ../scss/custom/_common.scss */
   .left-imageInner {
     max-width: 400px;
     width: 100%;
@@ -323,11 +364,13 @@ input.event-input-user:focus::-webkit-input-placeholder {
     min-height: 468px;
   }
 }
+/* line 192, ../scss/custom/_common.scss */
 .left-imageInner .layer-image-slide, .left-imageInner .layer-image-inner {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
+/* line 197, ../scss/custom/_common.scss */
 .left-imageInner .layer-image {
   height: 310px;
   top: 54px;
@@ -340,6 +383,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 39px -8px;
   box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 39px -8px;
 }
+/* line 205, ../scss/custom/_common.scss */
 .left-imageInner .layer-image-inner {
   height: 350px;
   top: -24px;
@@ -352,6 +396,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 39px -8px;
   box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 39px -8px;
 }
+/* line 213, ../scss/custom/_common.scss */
 .left-imageInner .layer-image-inner .images-selection {
   width: 100%;
   height: 412px;
@@ -362,6 +407,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+/* line 220, ../scss/custom/_common.scss */
 .left-imageInner .layer-image-inner .images-selection > img {
   display: block;
   max-width: 100%;
@@ -369,15 +415,18 @@ input.event-input-user:focus::-webkit-input-placeholder {
 }
 
 @media (min-width: 767px) {
+  /* line 228, ../scss/custom/_common.scss */
   .right-imageresponse {
     float: none;
   }
 }
+/* line 232, ../scss/custom/_common.scss */
 .right-imageresponse .imageresponse-btn {
   display: inline-block;
   padding-top: 40px;
 }
 @media (max-width: 767px) {
+  /* line 232, ../scss/custom/_common.scss */
   .right-imageresponse .imageresponse-btn {
     display: block;
     text-align: center;
@@ -385,6 +434,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   }
 }
 @media (min-width: 767px) {
+  /* line 241, ../scss/custom/_common.scss */
   .right-imageresponse .response-block-txt {
     position: relative;
     top: 50%;
@@ -393,6 +443,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
 }
 
 @media (max-width: 767px) {
+  /* line 249, ../scss/custom/_common.scss */
   .imageresponse-txt-inner {
     width: 100%;
     text-align: center;
@@ -404,6 +455,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
 }
 
 /*switch radio button style begining*/
+/* line 262, ../scss/custom/_common.scss */
 .switch-btn-custom {
   position: relative;
   overflow: hidden;
@@ -413,15 +465,18 @@ input.event-input-user:focus::-webkit-input-placeholder {
   border-radius: 18px;
 }
 @media (max-width: 767px) {
+  /* line 262, ../scss/custom/_common.scss */
   .switch-btn-custom {
     margin: 0 auto;
   }
 }
+/* line 271, ../scss/custom/_common.scss */
 .switch-btn-custom input#on, .switch-btn-custom input#off {
   position: absolute;
   left: 0;
   opacity: 0;
 }
+/* line 278, ../scss/custom/_common.scss */
 .switch-btn-custom label.left-box, .switch-btn-custom label.right-box {
   width: 50%;
   float: left;
@@ -432,18 +487,21 @@ input.event-input-user:focus::-webkit-input-placeholder {
   color: #fff;
   cursor: pointer;
 }
+/* line 288, ../scss/custom/_common.scss */
 .switch-btn-custom label.switch-btn-bg {
   background: #db3038;
   padding-right: 11px;
   border-bottom-left-radius: 18px;
   border-top-left-radius: 18px;
 }
+/* line 294, ../scss/custom/_common.scss */
 .switch-btn-custom label.right-box {
   background: #37ce8b;
   border-bottom-right-radius: 18px;
   border-top-right-radius: 18px;
   padding-right: 11px;
 }
+/* line 302, ../scss/custom/_common.scss */
 .switch-btn-custom .layer-disable {
   display: inline-block;
   width: 67px;
@@ -454,10 +512,12 @@ input.event-input-user:focus::-webkit-input-placeholder {
   left: 37%;
 }
 
+/* line 313, ../scss/custom/_common.scss */
 .ui-loader {
   display: none;
 }
 
+/* line 316, ../scss/custom/_common.scss */
 .ui-page {
   min-height: 0px !important;
   outline: none;
@@ -467,28 +527,136 @@ input.event-input-user:focus::-webkit-input-placeholder {
 /*switch radio button style End*/
 /*image-shocase style End*/
 /*popup style begining */
-.popup-overlay {
+/* line 327, ../scss/custom/_common.scss */
+.position-fixed, .popup-overlay {
+  position: fixed;
   width: 100%;
   height: 100%;
-  background: #00000073;
-  z-index: 8888;
-  position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
+/* line 334, ../scss/custom/_common.scss */
+.popup-overlay {
+  background: #00000073;
+  z-index: 8888;
+}
+
+/* line 339, ../scss/custom/_common.scss */
 .start-info-popup {
   width: 320px;
   background: #fff;
+  width: 320px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  top: 70%;
+  left: 65%;
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  /* line 339, ../scss/custom/_common.scss */
+  .start-info-popup {
+    top: 58%;
+    left: 50%;
+  }
+}
+/* line 354, ../scss/custom/_common.scss */
+.start-info-popup:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+@media (max-width: 767px) {
+  /* line 354, ../scss/custom/_common.scss */
+  .start-info-popup:after {
+    top: 100%;
+    left: 50%;
+    border-color: #fff transparent transparent transparent;
+  }
+}
+/* line 369, ../scss/custom/_common.scss */
+.start-info-popup .start-info-icon {
+  display: inline-block;
+  float: left;
+}
+/* line 373, ../scss/custom/_common.scss */
+.start-info-popup .start-info-resize {
+  float: left;
+  padding-left: 10px;
+}
+/* line 377, ../scss/custom/_common.scss */
+.start-info-popup .lets-practice-instruc {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  line-height: 22px;
+}
+/* line 383, ../scss/custom/_common.scss */
+.start-info-popup .lets-practice-label {
+  color: #00adef;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* line 391, ../scss/custom/_common.scss */
+.lets-started-info {
+  width: 48%;
+  position: relative;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  /* line 391, ../scss/custom/_common.scss */
+  .lets-started-info {
+    width: 90%;
+  }
+}
+/* line 403, ../scss/custom/_common.scss */
+.lets-started-info .lets-started-info-icon {
+  text-align: center;
+  width: 100%;
+}
+/* line 406, ../scss/custom/_common.scss */
+.lets-started-info .lets-started-info-icon > img {
+  display: inline-block;
+  width: 175px;
+}
+/* line 412, ../scss/custom/_common.scss */
+.lets-started-info .start-info-txt > .start-info-txt-inner {
+  color: #000;
+}
+@media (max-width: 767px) {
+  /* line 412, ../scss/custom/_common.scss */
+  .lets-started-info .start-info-txt > .start-info-txt-inner {
+    font-size: 20px;
+  }
+}
+/* line 420, ../scss/custom/_common.scss */
+.lets-started-info .started-info-label > .started-info-txt {
+  padding: 20px 0px;
 }
 
 /*popup style End */
+/* line 426, ../scss/custom/_common.scss */
 .dropdown-categories {
   width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 @media (max-width: 767px) {
+  /* line 426, ../scss/custom/_common.scss */
   .dropdown-categories {
     width: 100%;
     margin: 0;
@@ -497,6 +665,7 @@ input.event-input-user:focus::-webkit-input-placeholder {
   }
 }
 
+/* line 437, ../scss/custom/_common.scss */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -511,6 +680,7 @@ select {
 
 /* Custom Select */
 /* Arrow */
+/* line 450, ../scss/custom/_common.scss */
 .select-categories-inner {
   position: relative;
   display: inline-block;
@@ -520,23 +690,25 @@ select {
   background: #f3f3f3;
   overflow: hidden;
   border-radius: .25em;
+  /*&:before{
+  	 right: 17px;
+      top: 16px;
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      border-width: 21px 10px 0;
+      border-style: solid;
+      border-color: #fff transparent;
+      display: block;
+      width: 0;
+      z-index: 333333;
+  	}*/
 }
+/* line 459, ../scss/custom/_common.scss */
 .select-categories-inner.marTop20 {
   margin-top: 20px;
 }
-.select-categories-inner:before {
-  right: 17px;
-  top: 16px;
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  border-width: 21px 10px 0;
-  border-style: solid;
-  border-color: #fff transparent;
-  display: block;
-  width: 0;
-  z-index: 333333;
-}
+/* line 475, ../scss/custom/_common.scss */
 .select-categories-inner:after {
   content: '\25BC';
   position: absolute;
@@ -547,12 +719,15 @@ select {
   background: #c5c5c5;
   pointer-events: none;
   font-size: 34px;
-  color: #949494;
-  z-index: 222;
+  /*color: #949494;	
+  z-index: 222;*/
+  color: #fff;
 }
+/* line 489, ../scss/custom/_common.scss */
 .select-categories-inner.marTop {
   margin-top: 20px;
 }
+/* line 492, ../scss/custom/_common.scss */
 .select-categories-inner select {
   width: 100%;
   height: 100%;
@@ -562,13 +737,16 @@ select {
   cursor: pointer;
   font-size: 1.2em;
 }
+/* line 501, ../scss/custom/_common.scss */
 .select-categories-inner select::-ms-expand {
   display: none;
 }
 
+/* line 1, ../scss/custom/_header-footer.scss */
 .header-nav {
   width: 100%;
 }
+/* line 3, ../scss/custom/_header-footer.scss */
 .header-nav > .nav-logo {
   width: 105px;
   float: left;
@@ -576,11 +754,13 @@ select {
 }
 
 @media (max-width: 767px) {
+  /* line 10, ../scss/custom/_header-footer.scss */
   .remove-header {
     display: none;
   }
 }
 
+/* line 15, ../scss/custom/_header-footer.scss */
 .btn-footer {
   width: 100%;
   position: absolute;
@@ -589,6 +769,7 @@ select {
   text-align: center;
 }
 @media (max-width: 767px) {
+  /* line 15, ../scss/custom/_header-footer.scss */
   .btn-footer {
     position: fixed;
   }
