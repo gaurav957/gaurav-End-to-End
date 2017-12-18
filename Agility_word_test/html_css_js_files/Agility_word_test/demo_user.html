@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agility test</title>
+<link href="css/custom_style.css" type="text/css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+<!-- <script src="js/vendor/jquery-ui-touch-punch.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+
+<!--main wrapper begining-->
+	<!--popup overlay begining-->
+   <!-- practice popup begining-->
+   <div id="survey">
+   <demo-start-panel :demo-start-data="demostartdata"></demo-start-panel>
+   <demo-complete-panel :demo-complete-data="democompletedata"></demo-complete-panel>
+		<!-- <div class="popup-overlay practice-txt-popup practice-txt-instruc-hidden">
+			<div class="start-info-popup practice-txt-instruc-hidden" >
+               <div class="clearfix">
+                <div class="start-info-icon"><img src="images/start_info_icon.jpg" alt="" title=""/></div>
+                <div class="start-info-resize">
+                    <div class="lets-practice-txt">
+                    <div class="lets-practice-instruc">Click to the left for yes </div>
+                    <div class="lets-practice-instruc">Click to the right for Noe </div>
+                    <div class="lets-practice-label">LET'S PRACTICE ONCE</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+		</div> -->
+        <!-- practice popup End-->
+                <!-- start popup begining-->
+   <!--      <div class="popup-overlay lets-start-popup practice-txt-instruc-hidden">
+			<div class="lets-started-info practice-txt-instruc-hidden" >
+                <div class="lets-started-info-icon"><img src="images/start-popup-icon.png" alt="" title=""/></div>
+                <div class="started-info-label">
+                    <h1 class="started-info-txt">Great! Now lets get started </h1>
+                </div>
+                <div class="lets-start-btn">
+                  <div class="start-btn"><span>Ok</span></div>
+                </div>
+            </div>
+		</div> -->
+         <!-- start popup begining-->
+        <!--<div class="popup-overlay lets-start-popup practice-txt-instruc-hidden">
+			<div class="lets-started-info practice-txt-instruc-hidden" >
+                <div class="lets-started-info-icon"><img src="images/start-popup-icon.png" alt="" title=""/></div>
+                <div class="started-info-label">
+                    <h1 class="started-info-txt">Great! Now lets get started </h1>
+                </div>
+                <div class="lets-start-btn">
+                  <div class="start-btn"><span>Ok</span></div>
+                </div>
+            </div>
+		</div>-->
+         <!-- start popup begining-->
+		<!--popup overlay End-->
+		<header-panel :header-data="alldata"></header-panel>
+		<user-practice-panel :user-practice="userpracticedata"></user-practice-panel >
+<!-- 	<div class="container-wrapper"> -->
+		
+		<!--header begining-->
+
+		
+			<!--header End-->
+		<!-- <div class="container-inner">
+			 survey content begining
+			<div class="inner-content">
+				<div class="inner-resize-container">
+				   image-shocase begining
+					<div class="image-shocase  clearfix">
+							<div class="left-imageInner">
+								<div class="layer-image layer-image-slide">
+								   <div class="layer-image-inner">
+									   <div class="images-selection"><img src="images/categories_wise/vcan_place.png"/></div>
+								   </div>
+								 </div>
+							</div>
+							<div class="right-imageresponse">
+                               <div class="response-block-txt">
+									<div class="imageresponse-txt-inner"><h2 class="response-title">IT'S <br/>VACATION PLACE</h2></div>
+									<div class="imageresponse-btn">
+								      <div class="switch-btn-custom">
+										   <div id="" class="nob-btn"></div>
+											<div class="layer-disable"></div>
+											 <input id="on" name="state-id" type="radio" checked="">
+											 <label for="on" onclick="" class="left-box switch-btn-bg switching" data-info="1">ON</label>
+											 <input id="off" name="state-id" type="radio">
+											<label for="off" onclick="" class="right-box switching" data-info="2">OFF</label>
+                                        </div>
+                                        
+										
+                                        
+								   </div>
+								</div>
+							</div>
+						</div> -->
+					<!-- </div> -->
+					<!-- image-shocase End
+				</div>
+				<!--<div class="btn-footer">
+					 <div class="start-btn"><span>LETS'S START</span> </div>
+				</div>-->
+			<!-- </div> -->
+			<!--survey content End-->
+		<!-- </div>
+	</div> -->
+	</div>
+	<!--main wrapper End-->
+	<div style="display:none;">
+		<fieldset id="fieldset_testScreen"><table cellspacing="0" summary="Answers of testScreen. Column number 1">
+		<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+		  <tr>
+			<td class="input"><input tabindex="1" type="radio" name="testScreen" id="testScreen_1" value="1"></td>
+			<td class="answerlabel"><label for="testScreen_1" id="testScreen_1_label">YES</label></td>
+		  </tr>
+		  <tr>
+			<td class="input"><input tabindex="2" type="radio" name="testScreen" id="testScreen_2" value="2"></td>
+			<td class="answerlabel"><label for="testScreen_2" id="testScreen_2_label">NO</label></td>
+		  </tr>
+		</tbody></table>
+
+		</fieldset>
+	</div>
+	<div style="display:none;" class="navigationarea"><input type="submit" id="forwardbutton" name="__fwd" tabindex="9998" class="navbutton confirmit-nav" onclick=" if(typeof wix=='object') {wix.nav(event, 'p1862356818');} " value="  >>  "></div>
+<span id="jsonData" style="display: none">
+	{
+	"leftTopIntroImg1":"images/mck_logo_inner.jpg",
+	"leftTopIntroImg2":"images/logo_agility.jpg",
+	"demoStartData":{
+		"demoImg":"images/start_info_icon.jpg",
+		"practiceInsOne":"Click to the left for yes",
+		"practiceInsTwo":"Click to the left for no",
+		"practiceLabel":"LET'S PRACTICE ONCE"
+	},
+	"demoUserPractice":{
+		"userPracticeImg":"images/categories_wise/vcan_place.png",
+		"userPracticeTxt":"IT'S A VACATION PLACE",
+		"choiceYesTxt":"Yes",
+		"choiceYesTxtTarget":"testScreen_1",
+		"choiceNoTxt":"No",
+		"choiceNoTxtTarget":"testScreen_2"
+	},
+	"demoCompletePopupData":{
+		"practiceCompleteImg":"images/start-popup-icon.png",
+		"completeTxt":"Great! Now lets get started",
+		"btnTxt":"Ok",
+		"target":"forwardbutton"
+	
+	}
+}
+</span>
+<script src="js/vendor/vue.js" type="text/javascript"></script>
+<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="js/production/demo_user.js" type="text/javascript"></script>
+<!-- <script src="js/production/main_survey_jquery.js" type="text/javascript"></script> -->
+<script src="js/vendor/jquery-mobile.js"></script>
+	   
+</body>
+</html>
+

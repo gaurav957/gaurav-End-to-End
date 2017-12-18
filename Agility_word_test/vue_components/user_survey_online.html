@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agility test</title>
+<link href="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/css/custom_style.css" type="text/css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+   <div id="survey">
+   
+		<header-panel :header-data="alldata"></header-panel>
+		<user-practice-panel :survey-data="surveydata"></user-practice-panel >
+
+	</div>
+
+	<!--main wrapper End-->
+	<div style="display:block;">
+		<fieldset id="fieldset_testScreen"><table cellspacing="0" summary="Answers of testScreen. Column number 1">
+		<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+		  <tr>
+			<td class="input"><input tabindex="1" type="radio" name="testScreen" id="testScreen_1" value="1"></td>
+			<td class="answerlabel"><label for="testScreen_1" id="testScreen_1_label">YES</label></td>
+		  </tr>
+		  <tr>
+			<td class="input"><input tabindex="2" type="radio" name="testScreen" id="testScreen_2" value="2"></td>
+			<td class="answerlabel"><label for="testScreen_2" id="testScreen_2_label">NO</label></td>
+		  </tr>
+		</tbody></table>
+
+		</fieldset>
+	</div>
+	<div style="display:block;" class="navigationarea"><input type="submit" id="forwardbutton" name="__fwd" tabindex="9998" class="navbutton confirmit-nav" onclick=" if(typeof wix=='object') {wix.nav(event, 'p1862356818');} " value="  >>  "></div>
+<span id="jsonData" style="display: none">
+	{
+	"leftTopIntroImg1":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/mck_logo_inner.jpg",
+	"leftTopIntroImg2":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/logo_agility.jpg",
+	"surveyData":{
+		"surveyDataImg":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/categories_wise/vcan_place.png",
+		"surveyDataTxt":"IT'S A VACATION PLACE",
+		"choiceYesTxt":"Yes",
+		"choiceYesTxtTarget":"testScreen_1",
+		"choiceNoTxt":"No",
+		"choiceNoTxtTarget":"testScreen_2"
+	},
+	"forwardBtnTarget":"forwardbutton"
+}
+</span>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/vendor/vue.js" type="text/javascript"></script>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/vendor/jquery-mobile.js"></script>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/production/user_survey.js" type="text/javascript"></script>	   
+</body>
+</html>
+

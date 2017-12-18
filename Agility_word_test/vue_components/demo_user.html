@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agility test</title>
+<link href="css/custom_style.css" type="text/css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+<!--main wrapper start-->
+   <div id="survey">
+	   <demo-start-panel :demo-start-data="demostartdata"></demo-start-panel>
+	   <demo-complete-panel :demo-complete-data="democompletedata"></demo-complete-panel>
+	   <header-panel :header-data="alldata"></header-panel>
+	   <user-practice-panel :user-practice="userpracticedata"></user-practice-panel >
+   </div>
+	<!--main wrapper End-->
+	<div style="display:none;">
+		<fieldset id="fieldset_testScreen"><table cellspacing="0" summary="Answers of testScreen. Column number 1">
+		<thead class="confirmit-hidden"><tr><th></th><th></th></tr></thead><tbody>
+		  <tr>
+			<td class="input"><input tabindex="1" type="radio" name="testScreen" id="testScreen_1" value="1"></td>
+			<td class="answerlabel"><label for="testScreen_1" id="testScreen_1_label">YES</label></td>
+		  </tr>
+		  <tr>
+			<td class="input"><input tabindex="2" type="radio" name="testScreen" id="testScreen_2" value="2"></td>
+			<td class="answerlabel"><label for="testScreen_2" id="testScreen_2_label">NO</label></td>
+		  </tr>
+		</tbody></table>
+
+		</fieldset>
+	</div>
+	<div style="display:none;" class="navigationarea"><input type="submit" id="forwardbutton" name="__fwd" tabindex="9998" class="navbutton confirmit-nav" onclick=" if(typeof wix=='object') {wix.nav(event, 'p1862356818');} " value="  >>  "></div>
+<span id="jsonData" style="display: none">
+	{
+	"leftTopIntroImg1":"images/mck_logo_inner.jpg",
+	"leftTopIntroImg2":"images/logo_agility.jpg",
+	"demoStartData":{
+		"demoImg":"images/start_info_icon.jpg",
+		"practiceInsOne":"Click to the left for yes",
+		"practiceInsTwo":"Click to the left for no",
+		"practiceLabel":"LET'S PRACTICE ONCE"
+	},
+	"demoUserPractice":{
+		"userPracticeImg":"images/categories_wise/vcan_place.png",
+		"userPracticeTxt":"IT'S A VACATION PLACE",
+		"choiceYesTxt":"Yes",
+		"choiceYesTxtTarget":"testScreen_1",
+		"choiceNoTxt":"No",
+		"choiceNoTxtTarget":"testScreen_2"
+	},
+	"demoCompletePopupData":{
+		"practiceCompleteImg":"images/start-popup-icon.png",
+		"completeTxt":"Great! Now lets get started",
+		"btnTxt":"Ok",
+		"target":"forwardbutton"
+	
+	}
+}
+</span>
+<script src="js/vendor/vue.js" type="text/javascript"></script>
+<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="js/vendor/jquery-mobile.js"></script>
+<script src="js/production/demo_user.js" type="text/javascript"></script>
+
+	   
+</body>
+</html>
+
