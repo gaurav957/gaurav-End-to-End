@@ -3,8 +3,8 @@ Vue.component('header-panel', {
 	props:['headerData'],
 	template:'<header class="header-nav header-nav-bg remove-header">\
 				<div class="nav-logo">\
-					<div><img :src="headerData.leftTopIntroImg1"  alt="Agility Word Test" title="Agility Word Test"/></div>\
-					<div><img :src="headerData.leftTopIntroImg2"  alt="Agility Word Test" title="Agility Word Test"/></div>\
+					<div><img :src="headerData.leftTopIntroImg1"  alt="" title=""/></div>\
+					<div><img :src="headerData.leftTopIntroImg2"  alt="" title=""/></div>\
 				</div>\
 			</header>'
 });
@@ -50,7 +50,16 @@ Vue.component('survey-panel',{
 			</div>\
 			<!--survey content End-->\
 		</div>\
-	</div>'	,
+		<div v-if="user.showBackBtn" @click="backBtn" v-html="user.backBtnText"></div>\
+	</div>',
+	
+	methods:{
+		backBtn : function(){
+			console.log("back is called");
+			
+		}
+		
+	},
 
 		mounted : function(){
 				(function(){

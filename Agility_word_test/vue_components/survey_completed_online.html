@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue_JSon_join</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+<link href="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/css/custom_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--main wrapper begining-->
+	<div class="container-wrapper" id="completion-data">
+		<header-panel :header-data="alldata"></header-panel>			
+		<completion-panel :inner-content="alldata"></completion-panel>	
+	</div>
+	<!--main wrapper End-->
+	
+<span id="jsonData" style="display: none">
+	{
+	"leftTopImg1":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/mck_logo_inner.jpg",
+	"leftTopImg2":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/logo_agility.jpg",
+	"completionImg":"http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/images/home_icon.jpg",
+	"completiontxt":"YOU HAVE COMPLETED THE WORD TEST",
+	"completionBtnData":{
+		"completionBtnTxt":"SHOW MY RESULTS",
+		"Target":"forwardbutton"	
+	}
+}
+</span>
+
+
+
+<div style="display:none;" class="navigationarea"><input type="submit" id="forwardbutton" name="__fwd" tabindex="9998" class="navbutton confirmit-nav" onclick=" if(typeof wix=='object') {wix.nav(event, 'p1862356818');} " value="  >>  "></div>
+
+</body>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/vendor/vue.js" type="text/javascript"></script>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="http://e2eresearch.com/swteam/html5Tools/Agility_tool_mck/js/production/survey_completed.js" type="text/javascript"></script>
+</html>
